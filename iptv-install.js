@@ -1,7 +1,7 @@
 (function() {
   'use strict';
 
-  // 1. Inject Styles (Small, Left Side, Premium Look)
+  // 1. Inject Styles (Perfect Match with Visitor Counter)
   var style = document.createElement('style');
   style.innerHTML = `
     #pwa-install-btn {
@@ -12,14 +12,14 @@
       background-color: #000000;
       color: #ffffff;
       border: none;
-      /* একদম ছোট এবং স্লিম সাইজ */
-      padding: 6px 12px;
-      font-size: 11px;
+      /* ভিজিটর কাউন্টারের সমান পারফেক্ট সাইজ */
+      padding: 10px 20px;
+      font-size: 13px; 
       border-radius: 50px;
       font-family: sans-serif;
       font-weight: bold;
       letter-spacing: 0.5px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+      box-shadow: 0 3px 12px rgba(0,0,0,0.3);
       z-index: 10000;
       cursor: pointer;
       transition: transform 0.2s ease, background-color 0.2s ease;
@@ -31,7 +31,7 @@
   `;
   document.head.appendChild(style);
 
-  // 2. Create Install Button (Text: IPTVPulse App)
+  // 2. Create Install Button (Text: IPTV Pulse App)
   var btn = document.createElement('button');
   btn.id = 'pwa-install-btn';
   btn.innerText = 'IPTVPulse App';
