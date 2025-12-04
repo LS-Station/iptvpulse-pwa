@@ -1,26 +1,27 @@
 (function() {
   'use strict';
 
-  // 1. Inject Styles (Button on LEFT side)
+  // 1. Inject Styles (Button on LEFT side - SMALLER SIZE)
   var style = document.createElement('style');
   style.innerHTML = `
     #pwa-install-btn {
       display: none;
       position: fixed;
       bottom: 20px;
-      left: 20px; /* Moved to Left Side */
+      left: 20px;
       background-color: #000000;
       color: #ffffff;
       border: none;
-      padding: 10px 20px;
+      /* সাইজ ছোট করার জন্য প্যাডিং এবং ফন্ট সাইজ কমানো হলো */
+      padding: 8px 16px;
+      font-size: 12px;
       border-radius: 50px;
       font-family: sans-serif;
       font-weight: bold;
-      font-size: 14px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      box-shadow: 0 3px 10px rgba(0,0,0,0.3);
       z-index: 10000;
       cursor: pointer;
-      transition: transform 0.2s ease;
+      transition: transform 0.2s ease, background-color 0.2s ease;
     }
     #pwa-install-btn:hover {
       transform: scale(1.05);
@@ -35,7 +36,7 @@
   btn.innerText = 'INSTALL APP';
   document.body.appendChild(btn);
 
-  // 3. Generate Manifest Dynamically (To fix Cross-Origin)
+  // 3. Generate Manifest Dynamically
   var manifest = {
     "name": "IPTV Pulse",
     "short_name": "IPTVPulse",
