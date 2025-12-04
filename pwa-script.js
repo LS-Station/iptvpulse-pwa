@@ -1,7 +1,7 @@
 (function() {
   'use strict';
 
-  // 1. Inject Styles (Button on LEFT side - SMALLER SIZE)
+  // 1. Inject Styles (Smaller & Sleeker)
   var style = document.createElement('style');
   style.innerHTML = `
     #pwa-install-btn {
@@ -12,13 +12,14 @@
       background-color: #000000;
       color: #ffffff;
       border: none;
-      /* সাইজ ছোট করার জন্য প্যাডিং এবং ফন্ট সাইজ কমানো হলো */
-      padding: 8px 16px;
-      font-size: 12px;
+      /* আরও ছোট এবং কম্প্যাক্ট সাইজ */
+      padding: 6px 12px;
+      font-size: 11px;
       border-radius: 50px;
       font-family: sans-serif;
       font-weight: bold;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+      letter-spacing: 0.5px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
       z-index: 10000;
       cursor: pointer;
       transition: transform 0.2s ease, background-color 0.2s ease;
@@ -30,10 +31,10 @@
   `;
   document.head.appendChild(style);
 
-  // 2. Create Install Button
+  // 2. Create Install Button (New Text)
   var btn = document.createElement('button');
   btn.id = 'pwa-install-btn';
-  btn.innerText = 'INSTALL APP';
+  btn.innerText = 'IPTVPulse App'; // টেক্সট পরিবর্তন করা হলো
   document.body.appendChild(btn);
 
   // 3. Generate Manifest Dynamically
