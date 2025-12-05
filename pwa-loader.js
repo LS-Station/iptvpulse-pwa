@@ -1,6 +1,12 @@
 (function() {
   'use strict';
 
+  // CHECK: Only run this script on the Homepage
+  // In Blogger, the homepage path is always '/' (even with ?m=1 for mobile)
+  if (window.location.pathname !== '/') {
+    return;
+  }
+
   // 1. Inject Styles (Matching Visitor Counter Size)
   var style = document.createElement('style');
   style.innerHTML = `
@@ -12,7 +18,7 @@
       background-color: #000000;
       color: #ffffff;
       border: none;
-      /* ভিজিটর কাউন্টারের সাথে মিল রেখে পারফেক্ট সাইজ */
+      /* Perfect size to match visitor counter */
       padding: 10px 20px;
       font-size: 13px;
       border-radius: 50px;
